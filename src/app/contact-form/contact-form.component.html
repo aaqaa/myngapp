@@ -1,0 +1,54 @@
+<form action="" #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input 
+      required 
+      minlength="4" 
+      maxlength="15" 
+      ngModel 
+      name="name" 
+      #nameControl = "ngModel" 
+      (change)="log(nameControl)"
+      type="text" 
+      id="name" 
+      class="form-control">
+    <div  *ngIf="nameControl.invalid && nameControl.touched" class="alert alert-danger">
+      <div *ngIf="nameControl.errors.required">Name is required</div>
+      <div *ngIf="nameControl.errors.minlength">Name should be minimum {{nameControl.errors.minlength.requiredLength}} characters</div>
+      <div *ngIf="nameControl.errors.maxlength">Max length should be {{nameControl.errors.maxlength.requiredLength}} characters</div>
+    </div>
+    </div>
+  <div class="form-group"><label for="comment">Comment</label>
+    <textarea required ngModel name="comment" 
+      #commentControl="ngModel" 
+      id="comment"
+      cols="30" 
+      rows="10" 
+      class="form-control">
+    </textarea>
+    <div *ngIf="commentControl.invalid && commentControl.touched" 
+      class="alert alert-cool">Fool needed to tell again</div>
+  </div>
+  <div class="checkbox">
+    <label for="">
+      <input type="checkbox"
+             ngModel name="isMuslim">
+             Are you a muslim
+    </label></div>
+    <div class="form-group">
+      <label for="contactMethod"></label>
+      <select ngModel name="contactMethod" id="contactMethod">
+        <option *ngFor = "let option of contactMethod" [ngValue]="option">{{option.value}}</option>
+      </select>        
+    </div>
+    <div class="radio">
+      <label for="rbContact" *ngFor="let item of contactMethod">
+        <input  ngModel type="radio" name="rbContact" [value]="item.id">
+        {{item.value}}
+      </label>
+      </div>
+    
+    <p>{{f.value | json}}</p>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+</form>

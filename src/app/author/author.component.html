@@ -1,0 +1,12 @@
+<div>List of AUthors</div>
+<ul *ngFor ="let item of list">
+  <li>{{item}}</li>
+  </ul>
+  <!-- <button class="btn btn-primary">Add</button> -->
+<br/>
+<br/>
+  <input [(ngModel)]="title" type="text" />
+  <div>{{title | toTitle}}</div>
+
+
+  

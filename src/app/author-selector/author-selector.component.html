@@ -1,0 +1,22 @@
+<!-- <ul class="nav nav-pills">
+
+  <li [class.active]="author == 'Basheer'"><a (click)="author = 'Basheer'">Basheer</a></li>
+  <li [class.active]="author == 'Naushad'" ><a (click)="author = 'Naushad'">Naushad</a></li>
+  <li [class.active]="author == 'Asheer'"><a (click)="author = 'Asheer'">Asheer</a></li>
+  <li [class.active]="author == 'Saman'"><a (click)="author = 'Saman'">Saman</a></li>
+
+
+</ul>
+<div [ngSwitch]="author">
+  <div *ngSwitchCase="'Asheer'">Asheer is son of Basheer</div>
+  <div *ngSwitchCase="'Basheer'">I am asheer's Father</div>
+  <div *ngSwitchCase="'Saman'">HI! I am asheer's Little sister</div>
+  <div *ngSwitchCase="'Naushad'">Hi! I am asheer's young Mother</div>
+</div> -->
+
+<button (click) = "loadAuthors()">Load Authors</button>
+
+<div class ="btn">List of authors</div>
+<ul *ngFor ="let author of author; trackBy : trackAuthor">
+    <li>{{author.value}}</li>
+</ul>

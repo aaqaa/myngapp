@@ -1,0 +1,50 @@
+<!-- <form #f="ngForm" (ngSubmit)="submit(f)">
+ 
+  <div class="form-group">
+    <label for="courseName">Course Name</label><br>
+    <input required minlength="3" 
+      maxlength="20" 
+      #courseName = "ngModel"
+      ngModel name="courseName" 
+      type="text" 
+      class="form-control" 
+      id="courseName" (change)="log(courseName)">
+  </div>
+  <div class="alert alert-danger" *ngIf="courseName.invalid && courseName.touched">
+    <div *ngIf="courseName.errors.required">Course name could not be empty</div>
+    <div *ngIf="courseName.errors.minlength">Minimum {{courseName.errors.minlength.requiredLength}} required!</div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="category" class="">Category</label>
+    
+    <select  ngModel 
+      name="category" 
+      id="category"
+      #cat = "ngModel">
+      <option *ngFor="let cat of category" [value]="cat">{{cat}}</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="cat.touched && cat.invalid">Please select any category</div>
+  </div>
+
+  <div class="form-group">
+    <label for="moneyBack" >
+      <input ngModel type="checkbox" id="moneyBack" name="moneyBack">30 days money back guarantee
+    </label>
+    </div>
+
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+  <p>{{f.value | json}}</p>
+
+</form> -->
+
+<div>
+  <iframe width="100%" height="290" 
+   [src]="getLink()" 
+   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">
+  </iframe>
+</div>
+
+
+

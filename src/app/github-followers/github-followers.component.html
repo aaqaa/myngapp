@@ -1,0 +1,14 @@
+<h1>Github Followers Page </h1>
+
+<div *ngFor = "let follower of followers" class="media">
+  <div class="media-left">
+      <img [src]="follower?.avatar_url" class="media-object">
+  </div>
+    <span class="media-body media-heading" [routerLink] = "['/followers' , follower.id]"
+    [queryParams] = "{page : 1 , order :'newest'}"
+    >{{follower?.login}}<br>
+    <a href="{{follower?.followers_url}}" class="media-body">{{follower?.followers_url}}</a>
+  </span>
+  
+</div>
+

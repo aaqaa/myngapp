@@ -1,0 +1,27 @@
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.heading{
+    font-size: 150%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.left{
+    
+    float: left;
+
+}
+.right{
+    float: right;
+}
+
+.container{
+    margin: auto;
+    display: inline-block;
+    text-align: left;
+
+}
